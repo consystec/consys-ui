@@ -2,6 +2,10 @@
   "name": "drawing-ui",
   "version": "1.0.0",
   "description": "Componentes React úteis em projetos da consystec",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/consystec/drawing-ui.git"
+  },
   "scripts": {
     "build": "node build.js",
     "postbuild": "npm run clean & npm run tsc && npm run copy-files",
