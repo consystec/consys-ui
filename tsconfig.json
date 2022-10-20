@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"allowJs": true,
+		"baseUrl": ".",
+		"outDir": "dist",
+		"paths": {
+			"drawing-ui": [
+				"src/index.tsx"
+			]
+		},
+		"module": "CommonJS",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"jsx": "react",
+		"declaration": true,
+		"target": "ES5",
+		"lib": [
+			"DOM",
+			"ES2022"
+		],
+	},
+	"files": [
+		"./src/index.d.ts"
+	],
+	"include": [
+		"./index.ts",
+		"./src",
+		"*.css"
+	],
+	"exclude": [
+		"node_modules",
+		"site",
+		"drawing-uiode",
+		"dist",
+	]
+}
