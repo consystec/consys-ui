@@ -1,5 +1,6 @@
 {
 	"compilerOptions": {
+		"resolveJsonModule": true,
 		"allowJs": true,
 		"baseUrl": ".",
 		"outDir": "dist",
@@ -24,6 +25,7 @@
 	],
 	"include": [
 		"./index.ts",
+		"./package.json",
 		"./src",
 		"*.css"
 	],
