@@ -5,7 +5,7 @@
 		"baseUrl": ".",
 		"outDir": "dist",
 		"paths": {
-			"drawing-ui": [
+			"@consys/ui": [
 				"src/index.tsx"
 			]
 		},
@@ -32,7 +32,6 @@
 	"exclude": [
 		"node_modules",
 		"site",
-		"drawing-uiode",
 		"dist",
 	]
 }

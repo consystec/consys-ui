@@ -1,4 +1,4 @@
-# drawing-ui
+# @consys/ui
 #### Componentes genéricos usados em projetos da consystec
 
 ## Rodar o projeto

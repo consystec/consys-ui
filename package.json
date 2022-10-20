@@ -1,10 +1,10 @@
 {
-  "name": "drawing-ui",
+  "name": "@consys/ui",
   "version": "1.0.0",
   "description": "Componentes React úteis em projetos da consystec",
   "repository": {
     "type": "git",
-    "url": "https://github.com/consystec/drawing-ui.git"
+    "url": "https://github.com/consystec/consys-ui.git"
   },
   "scripts": {
     "build": "node build.js",

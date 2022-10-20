@@ -8,7 +8,7 @@ const App: React.FC = () => {
 		<Row style={{ marginTop: 15 }}
 			justify='center'>
 			<Col>
-				<h1>Drawing UI {pkg.version}</h1>
+				<h1>Consys UI {pkg.version}</h1>
 			</Col>
 			<Col span={24}>
 				<Row align='middle'
