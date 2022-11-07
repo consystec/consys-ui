@@ -4,3 +4,12 @@
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+
+.seeMore {
+	background-color: #fff;
+	margin-top: -1.2rem;
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+	padding: 0px 8px;
+}

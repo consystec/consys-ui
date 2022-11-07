@@ -7,6 +7,7 @@ declare module '*truncate.css' {
 	*/
 	interface TruncateCss {
 		truncate: string;
+		seeMore: string;
 	}
 
 	const truncateCss: TruncateCss;

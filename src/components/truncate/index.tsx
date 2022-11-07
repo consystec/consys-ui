@@ -16,23 +16,32 @@ interface TruncateProps {
 const Truncate: React.FC<TruncateProps> = (props) => {
 	const [text, setText] = useState('');
 	const [viewAll, setViewAll] = useState(false);
+	let ref: HTMLDivElement;
+	let timeout: NodeJS.Timeout;
 
 	const onSeeMore = () => {
 		setViewAll(old => !old);
 	}
 
-	const elementRef = (ref: HTMLDivElement) => {
-		const { offsetHeight, scrollHeight, offsetWidth, scrollWidth, innerText } = (ref || {});
+	const elementRef = (divRef: HTMLDivElement) => {
+		const { onTruncate } = props;
 
-		setTimeout(() => {
-			if (offsetHeight < scrollHeight || offsetWidth < scrollWidth) {
-				setText(innerText);
-			} else {
-				setText('');
+		ref = divRef;
+
+		if (timeout) {
+			clearTimeout(timeout);
+		}
+
+		timeout = setTimeout(() => {
+			let text = '';
+
+			if (ref.offsetHeight < ref.scrollHeight || ref.offsetWidth < ref.scrollWidth) {
+				text = ref.innerText;
 			}
 
-			props?.onTruncate?.(text);
-		}, 100)
+			setText(text);
+			onTruncate?.(text);
+		}, 100);
 	}
 
 	const { seeMore, className, children, size, tooltip, tooltipProps } = props;
@@ -60,15 +69,7 @@ const Truncate: React.FC<TruncateProps> = (props) => {
 				{viewAll ? button : null}
 			</div>
 			{text && seeMore && !viewAll ?
-				<div onClick={onSeeMore}
-					style={{
-						backgroundColor: '#fff',
-						marginTop: '-1.2rem',
-						position: 'absolute',
-						right: 0,
-						cursor: 'pointer',
-						padding: '0px 8px',
-					}}>
+				<div className={truncateCss.seeMore}>
 					{button}
 				</div>
 				: null}
