@@ -35,7 +35,7 @@ const Truncate: React.FC<TruncateProps> = (props) => {
 		timeout = setTimeout(() => {
 			let text = '';
 
-			if (ref.offsetHeight < ref.scrollHeight || ref.offsetWidth < ref.scrollWidth) {
+			if (ref && (ref.offsetHeight < ref.scrollHeight || ref.offsetWidth < ref.scrollWidth)) {
 				text = ref.innerText;
 			}
 
